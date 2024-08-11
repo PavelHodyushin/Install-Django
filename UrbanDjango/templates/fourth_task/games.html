@@ -1,0 +1,41 @@
+{% extends "menu.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% block pagename %}
+        <h1>Игры</h1>
+    {% endblock %}
+
+    {% block menu %}
+        {{ block.super }}
+    {% endblock %}
+
+
+    {% block content %}
+       <p><h2>На данной странице мы предлагаем вам приобрести эксклюзивную игру из нашей коллекции<h2></p>
+    <ul><h2>{{game_1}}<h2></ul>
+    <button><h1>Купить<h1></button>
+    <ul><h2>{{game_2}}<h2></ul>
+    <button><h1>Купить<h1></button>
+    <ul><h2>{{game_3}}<h2></ul>
+    <button><h1>Купить<h1></button>
+
+    {% for i in games %}
+        <p>{{ i }}</p>
+    {% endfor %}
+
+    <button onclick="window.history.back()"><h2>Вернуться обратно<h2></button>
+    {% endblock %}
+
+
+
+
+
+</body>
+</html>
+
